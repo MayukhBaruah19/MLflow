@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/acer/Desktop/Mlfow/mlruns/0/89ace099a92b4d67bc2d2d371f2b7659/artifacts
+end_time: 1731994873923
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 89ace099a92b4d67bc2d2d371f2b7659
+run_name: amazing-frog-120
+run_uuid: 89ace099a92b4d67bc2d2d371f2b7659
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731994869531
+status: 3
+tags: []
+user_id: acer
