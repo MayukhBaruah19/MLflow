@@ -64,7 +64,8 @@ if __name__ == "__main__":
 
         (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
 
-        print("Elasticnet model (alpha={:f}, l1_ratio={:f}):".format(alpha, l1_ratio))
+        print("Elasticnet model (alpha={:f}, l1_ratio={:f}):".format(
+            alpha, l1_ratio))
         print("  RMSE: %s" % rmse)
         print("  MAE: %s" % mae)
         print("  R2: %s" % r2)
@@ -78,7 +79,15 @@ if __name__ == "__main__":
         predictions = lr.predict(train_x)
         signature = infer_signature(train_x, predictions)
 
+        # fro remote server(dagshub)
+        remote_server_uri = "https://dagshub.com/MayukhBaruah19/MLflow.mlflow"
+        mlflow.set_tracking_uri(remote_server_uri)
+
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+
+        # import dagshub
+        # dagshub.init(repo_owner='MayukhBaruah19', repo_name='MLflow', mlflow=True)    
+
 
         # Model registry does not work with file store
         if tracking_url_type_store != "file":
